@@ -1,4 +1,4 @@
-consoleText(['#StayHome', '#ОставайсяДома'], 'text',['white']);
+consoleText(['Hello, ', 'Wordld!!!'], 'text',['white']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
