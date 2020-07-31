@@ -1,5 +1,5 @@
 # ilya-bukinich.github.io
 
 ## Overview
-One-page business card site
+One-page site
 Work with layout, scripts, publication on GitHub Pages
