@@ -20,6 +20,12 @@
   font-weight: bold;
   color: #ffffff;
 }
+
+.gw-name:hover, .gw-name:focus {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
 .gw-repo-desc{
   color: #ffffff;
 }

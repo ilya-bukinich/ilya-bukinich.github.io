@@ -72,7 +72,9 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
                     tag: 'a',
                     href: repo.html_url,
                     text: repo.name,
-                    cls: 'gw-name'
+                    cls: 'gw-name',
+                    target: "_blank",
+                    rel: "nofollow"
                   })
                 ]
               }), repo.language != null ? make({
