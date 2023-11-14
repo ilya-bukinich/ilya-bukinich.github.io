@@ -36,6 +36,41 @@
 
 <body>
 
+  <!-- Cookie alert -->
+  <div id="alertBox" style="display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  padding: 20px; 
+  background-color: rgba(52, 58, 64, 0.75);">
+    <p style="font-size: 1rem; color: white;">This site use cookies and other technologies to collect anonymized interaction data in order to improve your experience on our site and enhance its performance. By continuing to use this site, you agree to our use of your data</p>
+    <button type="button" class="btn btn-primary btn-sm btn-block" onclick="acceptAndClose();">Accept</button>
+  </div>
+
+  <script>
+  function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+  }
+
+  function acceptAndClose() {
+    document.getElementById('alertBox').style.display = 'none';
+    var d = new Date();
+    d.setFullYear(d.getFullYear() + 100); // 100 years
+    document.cookie = "userAccepted=true; expires=" + d.toUTCString() + "; path=/";
+  }
+
+  window.onload = function() {
+    if(!getCookie("userAccepted")) {
+      var alertBox = document.getElementById('alertBox');
+      alertBox.style.display = 'block';
+    }
+  };
+  </script>
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
     <div class="container">
